@@ -7,17 +7,10 @@ body {
 
 .header {
     font-size: 45px;
-	position: fixed;
-	margin-left: 65px;
-	margin-top: -30px;
-	text-align: center;
-	background-color: rgba(245, 245, 220, 0.664);
 }
 
 .text1 {
     font-size: 20px;
-	margin-bottom: 20px;
-	padding-top: 200px;
 }
 
 .ph1 {
@@ -27,7 +20,7 @@ body {
 img {
     width: 300px;
     border-radius: 35px;
-    padding-bottom: 20px;
+    margin: 10px;
     display: flex;
     margin: 0 auto;
 }
@@ -39,7 +32,7 @@ img {
 .heart {
 	width: 100px;
 	height: 100px;
-	-webkit-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);  /* для Chrome и Safari */
 	transform: rotate(45deg);
 	border: solid 1px red;
 	border-top: none;
@@ -68,10 +61,15 @@ img {
 }
 .heart {
 	background: red;
+		/* для браузеров, которые не поддерживают градиент */
 	background: -webkit-radial-gradient(115% 50%, 75px 110px, #8B0000, #8B0000, red);
+		/* для Chrome и Safari */
 	background: -moz-radial-gradient(170% 50%, circle , #8B0000 0%, #8B0000 52%,  red 76%);
+		/* для Firefox */
 	background: -o-radial-gradient(115% 50%, 75px 110px, #8B0000, #8B0000, red);
+		/* для Opera */
 	background: radial-gradient(115% 50%, 75px 110px, #8B0000, #8B0000, red);
+		/* по стандартам CSS3 */
 }
 .heart:before {
 	background: red;
@@ -88,11 +86,16 @@ img {
 	background: radial-gradient(50% 80%, 85px 80px, #FFB6C1, red, #8B0000);
 }
 .heart {
-	animation-duration: 800ms;
+	animation-name: 'anime';
+		/* имя кейфрейма для анимации */
+	animation-duration: 300ms;
+		/* длительность анимации */
 	animation-iteration-count: infinite;
+		/* количество повторений, в данном случае - бесконечно */
 	animation-direction: alternate;
+		/* проигрывать анимацию в прямом и в обратном порядке */
 	animation-timing-function: ease-in;
-	margin-bottom: 50px;
+		/* вычисление временных промежутков для анимации, в данном случае анимация ускоряется */
 }
 .heart {
 	-webkit-animation-name: 'anime';
