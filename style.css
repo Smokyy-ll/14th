@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(31, 0, 34);
+    background-color: rgb(110, 0, 0);
     font-family: Oswald;
     font-weight: bold;
     color: bisque;
@@ -10,13 +10,13 @@ body {
 	margin: 0 auto;
 	padding-top: -30px;
 	text-align: center;
-	background-color: rgba(245, 245, 220, 0.664);
+	background-color: rgba(245, 220, 220, 0.664);
 }
 
 .text1 {
     font-size: 20px;
 	margin-bottom: 20px;
-	padding-top: 200px;
+	padding-top: 100px;
 }
 
 .ph1 {
